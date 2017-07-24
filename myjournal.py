@@ -1,11 +1,9 @@
 #!/usr/bin/env python
-import cli.app
+import click
 
-@cli.app.CommandLineApp
-def ls(app):
-    pass
+@click.command()
+def list():
+    click.echo('Hello World!')
 
-ls.add_param("-l", "--long", help="list in long format", default=False, action="store_true")
-
-if __name__ == "__main__":
-    ls.run()
+if __name__ == '__main__':
+    hello()
